@@ -2,7 +2,7 @@ import React from "react"
 import "../../styles/generic.scss"
 import styles from "./layouts.module.scss"
 
-const PageLayout = () => {
+const PageLayout = ({ children }) => {
   return (
     <section>
       <div className="topBar"></div>
