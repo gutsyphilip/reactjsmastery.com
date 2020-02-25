@@ -2,9 +2,10 @@ import React from "react"
 import { Link, graphql } from "gatsby"
 
 import Bio from "../components/bio"
-import Layout from "../components/layout"
 import SEO from "../components/seo"
-import { rhythm } from "../utils/typography"
+import { HomeLayout } from "../components/layouts"
+import { Grid } from "../components/utility/Grid"
+import { GuidesCard } from "../components/cards"
 
 class BlogIndex extends React.Component {
   render() {
@@ -13,36 +14,38 @@ class BlogIndex extends React.Component {
     const posts = data.allMarkdownRemark.edges
 
     return (
-      <Layout location={this.props.location} title={siteTitle}>
-        <SEO title="All posts" />
-        <Bio />
-        {posts.map(({ node }) => {
-          const title = node.frontmatter.title || node.fields.slug
-          return (
-            <article key={node.fields.slug}>
-              <header>
-                <h3
-                  style={{
-                    marginBottom: rhythm(1 / 4),
-                  }}
-                >
-                  <Link style={{ boxShadow: `none` }} to={node.fields.slug}>
-                    {title}
-                  </Link>
-                </h3>
-                <small>{node.frontmatter.date}</small>
-              </header>
-              <section>
-                <p
-                  dangerouslySetInnerHTML={{
-                    __html: node.frontmatter.description || node.excerpt,
-                  }}
-                />
-              </section>
-            </article>
-          )
-        })}
-      </Layout>
+      <HomeLayout location={this.props.location} title={siteTitle}>
+        {/* <Grid columns="1fr 1fr" gap="100px"> */}
+        <section>
+          <h1>
+            Welcome <br /> to React JS Mastery.
+          </h1>
+          <br />
+          <p>
+            <span className="bgGradient">Learn</span> and{" "}
+            <span className="bgGradient">master</span> React JS from scratch
+            through online classes taught by live instructors and one-on-one
+            mentoring. Enjoy premium content designed to teach you the skills
+            required to{" "}
+            <span className="bgGradient">
+              build scalable applications that are blazing fast, scalable,
+              highly performant and fully functional
+            </span>{" "}
+            using React!
+          </p>
+        </section>
+        <section>
+          <GuidesCard />
+          <GuidesCard />
+          <GuidesCard />
+          <GuidesCard />
+          <GuidesCard />
+          <GuidesCard />
+          <GuidesCard />
+          <GuidesCard />
+        </section>
+        {/* </Grid> */}
+      </HomeLayout>
     )
   }
 }

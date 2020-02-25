@@ -1,11 +1,11 @@
 {
-  "name": "gatsby-starter-blog",
+  "name": "reactjsmastery.com",
   "private": true,
-  "description": "A starter for a blog powered by Gatsby and Markdown",
+  "description": "A blog focused on encouraging the matery of all things React.",
   "version": "0.1.0",
-  "author": "Kyle Mathews <mathews.kyle@gmail.com>",
+  "author": "Philip Obosi <philip.c.obosi@gmail.com>",
   "bugs": {
-    "url": "https://github.com/gatsbyjs/gatsby/issues"
+    "url": "https://github.com/worldclassdev/reactjsmastery.com/issues"
   },
   "dependencies": {
     "gatsby": "^2.18.12",
@@ -15,6 +15,7 @@
     "gatsby-plugin-manifest": "^2.2.31",
     "gatsby-plugin-offline": "^3.0.27",
     "gatsby-plugin-react-helmet": "^3.1.16",
+    "gatsby-plugin-sass": "^2.1.29",
     "gatsby-plugin-sharp": "^2.3.5",
     "gatsby-plugin-typography": "^2.3.18",
     "gatsby-remark-copy-linked-files": "^2.1.31",
@@ -25,6 +26,7 @@
     "gatsby-source-filesystem": "^2.1.40",
     "gatsby-transformer-remark": "^2.6.39",
     "gatsby-transformer-sharp": "^2.3.7",
+    "node-sass": "^4.13.1",
     "prismjs": "^1.17.1",
     "react": "^16.12.0",
     "react-dom": "^16.12.0",
@@ -50,7 +52,7 @@
   },
   "scripts": {
     "build": "gatsby build",
-    "develop": "gatsby develop",
+    "dev": "gatsby develop",
     "format": "prettier --write \"**/*.{js,jsx,json,md}\"",
     "start": "npm run develop",
     "serve": "gatsby serve",

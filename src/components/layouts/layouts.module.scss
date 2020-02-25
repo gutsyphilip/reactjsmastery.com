@@ -1,0 +1,21 @@
+@import "../../styles/converter";
+
+.homeLayout {
+  padding: to-em(80 220);
+  display: grid;
+  grid-gap: to-em(100);
+  grid-template-areas:
+    "intro cards"
+    ". cards";
+  & > :first-child {
+    grid-area: intro;
+    position: sticky;
+    top: to-em(80);
+  }
+  & > :last-child {
+    grid-area: cards;
+  }
+}
+.pageLayout {
+  padding: to-em(80 220);
+}

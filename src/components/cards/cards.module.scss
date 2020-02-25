@@ -1,0 +1,14 @@
+@import "../../styles/variables";
+@import "../../styles/converter";
+
+.guidesCard {
+  background-color: $light-black;
+  transition-property: background-color, border-color, color, opacity, transform;
+  transition: all 0.2s ease-in-out;
+  margin-bottom: to-em(15);
+  padding: to-em(20 40);
+  cursor: pointer;
+  &:hover {
+    transform: scale(1.1);
+  }
+}

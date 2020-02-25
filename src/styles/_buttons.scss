@@ -1,0 +1,42 @@
+// :root {
+//   button {
+//     padding: 10px 15px;
+//     border-radius: 5px;
+//     display: flex;
+//     align-items: center;
+//     text-align: center;
+//     justify-content: center;
+//     transition: transform 0.2s ease-in-out;
+//     &:hover {
+//       transform: translateY(to-rem(-1)) !important;
+//     }
+//     &:active {
+//       transform: translateY(to-rem(2)) !important;
+//     }
+
+//     svg {
+//       margin-right: to-rem(10);
+//     }
+//     &.primary {
+//       background-color: #e7f3ff;
+//       color: #0f8cff;
+//     }
+//     &[variant="themed"] {
+//       color: $white;
+//       fill: $white !important;
+//       background-color: $tmm-theme-color;
+//     }
+//     &[variant="success-alt"] {
+//       color: #10b683;
+//       background: #e6f8f3;
+//     }
+
+//     &[variant="primary-alt"] {
+//       color: #0f8cff;
+//       background: #e7f3ff;
+//     }
+//     &:disabled {
+//       cursor: not-allowed;
+//     }
+//   }
+// }
