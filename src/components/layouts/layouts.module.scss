@@ -1,19 +1,35 @@
+@import "../../styles/breakpoint";
 @import "../../styles/converter";
 
 .homeLayout {
-  padding: to-em(80 220);
-  display: grid;
-  grid-gap: to-em(100);
-  grid-template-areas:
-    "intro cards"
-    ". cards";
+  padding: to-em(40);
   & > :first-child {
-    grid-area: intro;
-    position: sticky;
     top: to-em(80);
+    margin-bottom: to-em(60);
   }
-  & > :last-child {
-    grid-area: cards;
+
+  @include sm() {
+    padding: to-em(60);
+  }
+
+  @include lg() {
+    padding: to-em(60);
+    display: grid;
+    grid-gap: to-em(100);
+    grid-template-areas:
+      "intro cards"
+      ". cards";
+    & > :first-child {
+      grid-area: intro;
+      position: sticky;
+      top: to-em(80);
+    }
+    & > :last-child {
+      grid-area: cards;
+    }
+  }
+  @include xl() {
+    padding: to-em(80 220);
   }
 }
 .pageLayout {

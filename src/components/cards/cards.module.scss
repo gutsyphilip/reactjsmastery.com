@@ -3,12 +3,13 @@
 
 .guidesCard {
   background-color: $light-black;
-  transition-property: background-color, border-color, color, opacity, transform;
+  opacity: 0.7;
   transition: all 0.2s ease-in-out;
-  margin-bottom: to-em(15);
+  margin-bottom: to-em(20);
   padding: to-em(20 40);
   cursor: pointer;
   &:hover {
+    opacity: 1;
     transform: scale(1.1);
   }
 }
