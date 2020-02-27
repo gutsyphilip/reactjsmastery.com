@@ -2,14 +2,10 @@
 @import "../../styles/converter";
 
 .homeLayout {
-  padding: to-em(40);
+  padding: to-em(32);
   & > :first-child {
     top: to-em(80);
     margin-bottom: to-em(60);
-  }
-
-  @include sm() {
-    padding: to-em(60);
   }
 
   @include lg() {
