@@ -1,18 +1,18 @@
 import React from "react"
 import { Link, graphql } from "gatsby"
 
-import Bio from "../components/bio"
-import SEO from "../components/seo"
-import { PageLayout } from "../components/layouts"
+import Bio from "../../components/bio"
+import SEO from "../../components/seo"
 
-class BlogPostTemplate extends React.Component {
+class BlogPost extends React.Component {
   render() {
+    console.log(this.props)
     const post = this.props.data.markdownRemark
     const siteTitle = this.props.data.site.siteMetadata.title
     const { previous, next } = this.props.pageContext
 
     return (
-      <PageLayout location={this.props.location} title={siteTitle}>
+      <div location={this.props.location} title={siteTitle}>
         <SEO
           title={post.frontmatter.title}
           description={post.frontmatter.description || post.excerpt}
@@ -55,29 +55,9 @@ class BlogPostTemplate extends React.Component {
             </li>
           </ul>
         </nav>
-      </PageLayout>
+      </div>
     )
   }
 }
 
-export default BlogPostTemplate
-
-export const pageQuery = graphql`
-  query BlogPostBySlug($slug: String!) {
-    site {
-      siteMetadata {
-        title
-      }
-    }
-    markdownRemark(fields: { slug: { eq: $slug } }) {
-      id
-      excerpt(pruneLength: 160)
-      html
-      frontmatter {
-        title
-        date(formatString: "MMMM DD, YYYY")
-        description
-      }
-    }
-  }
-`
+export default BlogPost

@@ -7,7 +7,7 @@ import { HomeLayout } from "../components/layouts"
 import { Grid } from "../components/utility/Grid"
 import { GuidesCard } from "../components/cards"
 
-class BlogIndex extends React.Component {
+class Home extends React.Component {
   render() {
     const { data } = this.props
     const siteTitle = data.site.siteMetadata.title
@@ -50,7 +50,7 @@ class BlogIndex extends React.Component {
   }
 }
 
-export default BlogIndex
+export default Home
 
 export const pageQuery = graphql`
   query {

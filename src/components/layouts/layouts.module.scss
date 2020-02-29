@@ -1,8 +1,9 @@
 @import "../../styles/breakpoint";
 @import "../../styles/converter";
+@import "../../styles/variables";
 
 .homeLayout {
-  padding: to-em(32);
+  padding: to-em(30);
   & > :first-child {
     top: to-em(80);
     margin-bottom: to-em(60);
@@ -26,6 +27,37 @@
   }
   @include xl() {
     padding: to-em(80 220);
+  }
+}
+.libraryLayout {
+  & > :nth-child(1) {
+    display: none;
+  }
+  & > :nth-child(2) {
+    padding: to-em(30);
+  }
+  @include lg() {
+    display: grid;
+    grid-gap: to-em(30);
+    grid-template-columns: 280px 1fr;
+    grid-template-areas:
+      "sidebar content"
+      ". content"
+      ". content";
+    & > :nth-child(1) {
+      grid-area: sidebar;
+      display: flex;
+      flex-direction: column;
+      position: sticky;
+      top: to-em(30);
+      height: 100vh;
+      border-right: 1px solid $light-black;
+      display: flex;
+    }
+    & > :nth-child(2) {
+      padding: to-em(30);
+      grid-area: content;
+    }
   }
 }
 .pageLayout {

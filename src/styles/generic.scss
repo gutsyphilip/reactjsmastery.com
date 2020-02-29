@@ -1,6 +1,7 @@
 @import "variables";
 @import "breakpoint";
 @import "normalize";
+@import "prism";
 @import "converter";
 @import "buttons";
 
@@ -36,7 +37,7 @@ body {
   font-style: normal;
   font-weight: normal;
   margin: 0 auto;
-  background-color: $dark-black;
+  background-color: $black;
   color: $white;
 }
 
@@ -62,6 +63,7 @@ p {
   width: 100%;
   height: to-em(5);
   background: linear-gradient(90deg, #61dafb 0%, #b06ab3 100%);
+  z-index: 5;
 }
 .bgGradient {
   width: fit-content;
