@@ -34,11 +34,11 @@
   }
 }
 .guidesLayout {
-  margin: to-em(60 0);
+  margin: to-em(40 0);
 
   & > :nth-child(1) {
     display: none;
-    // margin-top: to-em(40);
+    padding-top: to-em(40);
   }
   @include lg() {
     display: grid;
