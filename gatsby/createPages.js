@@ -62,18 +62,4 @@ module.exports = async ({ graphql, actions }) => {
       },
     })
   })
-
-  const newestPerformanceEntry = async () => {
-    let response = await getNewestContent(graphql, "/performance")
-    return response.data.allMarkdownRemark.edges[0].node
-  }
-  console.log("newest", newestPerformanceEntry)
-  // Performance landing page should always show the most recent blog entry.
-  ;["/performance/", "/performance"].map(slug => {
-    createRedirect({
-      fromPath: slug ? slug : "",
-      redirectInBrowser: true,
-      toPath: newestPerformanceEntry.fields.slug,
-    })
-  })
 }
