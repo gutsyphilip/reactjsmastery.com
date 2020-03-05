@@ -2,6 +2,7 @@ import React, { Component } from "react"
 import PropTypes from "prop-types"
 import { Link } from "gatsby"
 import styles from "./sidebar.module.scss"
+import SideBarNavLink from "./SideBarNavLink"
 
 export default class SideBarNav extends Component {
   static propTypes = {
@@ -14,11 +15,19 @@ export default class SideBarNav extends Component {
     const { uid } = this.state
     return (
       <nav className={styles.sideBarNav}>
-        <h4>{section.title.toUpperCase()}</h4>
+        <h4>{section.title && section.title.toUpperCase()}</h4>
         <ul id={uid}>
           {section.items.map((item, index) => (
             <li key={item.id}>
-              <Link to={`${section.directory}/${item.id}`}>{item.title}</Link>
+              <SideBarNavLink
+                activeClassName={styles.sideBarNav__linkIsActive}
+                section={section}
+                item={
+                  section.isOrdered
+                    ? { ...item, title: `${index + 1}. ${item.title}` }
+                    : item
+                }
+              ></SideBarNavLink>
 
               {/* {createLink({
                 isActive: isScrollSync

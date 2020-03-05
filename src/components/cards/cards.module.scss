@@ -10,6 +10,11 @@
   cursor: pointer;
   &__Title {
     text-transform: uppercase;
+    margin-bottom: to-em(5);
+    color: $light-blue;
+  }
+  &__Description {
+    // font-size: to-em(14);
   }
   &:hover {
     opacity: 1;

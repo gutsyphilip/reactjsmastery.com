@@ -1,18 +1,19 @@
 import React from "react"
-import { LibraryLayout } from "../../components/layouts"
+import { graphql } from "gatsby"
+import { GuidesLayout } from "../../components/layouts"
 import BlogPostTemplate from "../content/BlogPost"
 import { SideBar } from "../../components/sidebar"
 
-const Library = ({ data, pageContext }) => {
+const Guides = ({ data, pageContext }) => {
   return (
-    <LibraryLayout>
+    <GuidesLayout>
       <SideBar />
       <BlogPostTemplate data={data} pageContext={pageContext} />
-    </LibraryLayout>
+    </GuidesLayout>
   )
 }
 
-export default Library
+export default Guides
 
 export const pageQuery = graphql`
   query BlogPostBySlug($slug: String!) {

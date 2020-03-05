@@ -2,7 +2,7 @@ import React from "react"
 import "../../styles/generic.scss"
 import styles from "./layouts.module.scss"
 
-const LibraryLayout = ({ title, children }) => {
+const GuidesLayout = ({ title, children }) => {
   const rootPath = `${__PATH_PREFIX__}/`
 
   return (
@@ -13,4 +13,4 @@ const LibraryLayout = ({ title, children }) => {
   )
 }
 
-export default LibraryLayout
+export default GuidesLayout

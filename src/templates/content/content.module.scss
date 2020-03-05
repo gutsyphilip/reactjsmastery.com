@@ -3,7 +3,19 @@
 @import "../../styles/variables";
 
 .blogPost {
-  padding: to-em(30);
+  padding: to-em(30 0);
+  @include lg() {
+    height: 100%;
+    // margin-left: auto;
+    // margin-right: auto;
+    display: grid;
+    // grid-gap: to-em(30);
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      "content"
+      "content"
+      "footer";
+  }
   &__Article,
   &__Footer {
     a {
@@ -30,6 +42,7 @@
     }
   }
   &__Article {
+    padding: to-em(30);
     line-height: 2 !important;
     h1,
     h2,
@@ -38,6 +51,7 @@
     h5,
     h6 {
       margin: to-em(10 0);
+      color: $light-blue;
     }
     p,
     ul,
@@ -62,29 +76,28 @@
       border-radius: 10px;
       -webkit-overflow-scrolling: touch;
       overflow: auto;
-      margin-right: -1.3125rem;
-      margin-left: -1.3125rem;
     }
     main {
-      padding: to-em(40 0);
+      padding: to-em(20 0);
       border-bottom: 1px solid $light-black;
+    }
+    &__Footer {
+      @include lg() {
+        grid-area: footer;
+        display: flex;
+        flex-direction: column;
+        max-width: to-em(900);
+      }
+    }
+    @include lg {
+      grid-area: content;
+      max-width: to-em(900);
+      // margin: auto;
     }
   }
 
-  @include lg() {
-    padding: to-em(30 80);
-    display: grid;
-    grid-gap: to-em(30);
-    grid-template-columns: 1fr 280px;
-    grid-template-areas:
-      "content nav"
-      "content nav"
-      "footer nav";
-    &__Article {
-      grid-area: content;
-    }
-
-    &__Nav {
+  &__Nav {
+    @include lg() {
       grid-area: nav;
       display: flex;
       flex-direction: column;
@@ -92,12 +105,6 @@
       top: to-em(30);
       height: 100vh;
       border-left: 1px solid $light-black;
-    }
-
-    &__Footer {
-      grid-area: footer;
-      display: flex;
-      flex-direction: column;
     }
   }
 }
