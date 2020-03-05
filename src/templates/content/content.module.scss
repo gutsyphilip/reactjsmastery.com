@@ -17,7 +17,7 @@
         left: 0px;
         bottom: -4px;
         width: 100%;
-        height: calc(100% - 18px);
+        height: to-em(5);
         z-index: -1;
         transition: 0.35s cubic-bezier(0.25, 0.1, 0, 2.05);
       }
@@ -39,15 +39,31 @@
     h6 {
       margin: to-em(10 0);
     }
-    p {
+    p,
+    ul,
+    ol {
       margin-bottom: to-em(20);
+    }
+    ul,
+    ol {
+      margin-block-start: 1em;
+      margin-block-end: 1em;
+      margin-inline-start: 0px;
+      margin-inline-end: 0px;
+      padding-inline-start: to-em(40px);
+    }
+    li > p {
+      margin: 0;
     }
 
     pre {
       margin: to-em(30 0);
+      padding: to-em(20);
       border-radius: 10px;
       -webkit-overflow-scrolling: touch;
       overflow: auto;
+      margin-right: -1.3125rem;
+      margin-left: -1.3125rem;
     }
     main {
       padding: to-em(40 0);
