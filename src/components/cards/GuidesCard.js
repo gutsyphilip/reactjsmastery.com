@@ -6,12 +6,12 @@ const GuidesCard = ({ data }) => {
   const { title, description, id } = data
   console.log("data", data)
   return (
-    <Link to={`/${id}/`}>
-      <div className={styles.guidesCard}>
+    <div className={styles.guidesCard}>
+      <Link to={`/${id}/`}>
         <h4 className={styles.guidesCard__Title}>{title}</h4>
         <p className={styles.guidesCard__Description}>{description}</p>
-      </div>
-    </Link>
+      </Link>
+    </div>
   )
 }
 

@@ -1,6 +1,8 @@
 import React from "react"
 import "../../styles/generic.scss"
 import styles from "./layouts.module.scss"
+import { NavBar } from "../navbar"
+import { AnnouncementStrip } from "../announcement-strip"
 
 class HomeLayout extends React.Component {
   render() {
@@ -9,7 +11,9 @@ class HomeLayout extends React.Component {
 
     return (
       <section>
+        <AnnouncementStrip />
         <div className="topBar"></div>
+        <NavBar />
         <main className={styles.homeLayout}>{children}</main>
       </section>
     )

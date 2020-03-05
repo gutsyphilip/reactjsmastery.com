@@ -7,6 +7,10 @@
   transition: all 0.2s ease-in-out;
   margin-bottom: to-em(20);
   padding: to-em(20 40);
+  a {
+    text-decoration: none !important;
+    color: $white;
+  }
   cursor: pointer;
   &__Title {
     text-transform: uppercase;

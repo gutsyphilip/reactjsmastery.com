@@ -1,0 +1,17 @@
+@import "../../styles/breakpoint";
+@import "../../styles/converter";
+@import "../../styles/variables";
+
+.announcementStrip {
+  display: flex;
+  align-items: center;
+  padding: 0 1.5em;
+  border-bottom: 1px solid $light-black;
+  background: $light-purple;
+  height: to-em(50);
+  // position: fixed;
+  width: 100%;
+  z-index: 10;
+  white-space: nowrap;
+  overflow: scroll;
+}

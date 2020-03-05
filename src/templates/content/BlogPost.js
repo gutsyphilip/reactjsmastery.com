@@ -54,7 +54,7 @@ class BlogPost extends React.Component {
                 )}
               </li>
             </ul>
-            <Bio />
+            {/* <Bio /> */}
           </footer>
         </article>
       </section>

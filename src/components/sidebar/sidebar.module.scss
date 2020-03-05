@@ -34,9 +34,10 @@
       :hover {
         color: $white;
       }
-      & {
+      a {
         display: block;
         color: rgba(255, 255, 255, 0.6);
+        text-decoration: none !important;
         font-weight: 400;
         min-height: 2.5em;
         position: relative;
@@ -45,6 +46,11 @@
         width: 100%;
         z-index: 1;
         text-decoration: none;
+        &,
+        &::before,
+        &::after {
+          transition: all 5s cubic-bezier(0.6, -0.28, 0.735, 0.045);
+        }
       }
     }
   }
@@ -56,7 +62,7 @@
     &::after {
       content: "";
       left: calc(0.5rem);
-      top: 0.8em;
+      top: 0.5em;
       height: 8px;
       position: absolute;
       width: 8px;

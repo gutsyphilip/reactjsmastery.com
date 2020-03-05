@@ -1,0 +1,22 @@
+@import "../../styles/breakpoint";
+@import "../../styles/converter";
+@import "../../styles/variables";
+
+.navBar {
+  display: flex;
+  align-items: center;
+  height: to-em(60);
+  padding: 1.5em;
+  border-bottom: 1px solid $light-black;
+  a {
+    text-decoration: none;
+  }
+  //   position: fixed;
+  //   top: to-em(40);
+  //   @include lg() {
+  //     padding: to-em(60);
+  //   }
+  //   @include xl() {
+  //     padding: to-em(20 220);
+  //   }
+}

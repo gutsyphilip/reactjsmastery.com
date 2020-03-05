@@ -66,7 +66,8 @@
       margin-inline-end: 0px;
       padding-inline-start: to-em(40px);
     }
-    li > p {
+    li > p,
+    blockquote > p {
       margin: 0;
     }
 
