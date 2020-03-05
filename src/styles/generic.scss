@@ -6,16 +6,12 @@
 @import "buttons";
 
 html {
-  // font-size: 62.5%;
-  // scroll-behavior: smooth;
+  font-size: 90%;
+  scroll-behavior: smooth;
 
-  // @include md {
-  //   font-size: 75%;
-  // }
-
-  // @include xl {
-  //   font-size: 100%;
-  // }
+  @include lg {
+    font-size: 100%;
+  }
 
   // @include rwd(1440) {
   //   font-size: 112.5%;
@@ -27,9 +23,8 @@ html {
 }
 
 body {
-  // font-family: "GT Walsheim Pro";
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto,
-    Helvetica Neue, Arial, Noto Sans, sans-serif, Apple Color Emoji,
+  font-family: "GT Walsheim Pro", -apple-system, BlinkMacSystemFont, Segoe UI,
+    Roboto, Helvetica Neue, Arial, Noto Sans, sans-serif, Apple Color Emoji,
     Segoe UI Emoji, Segoe UI Symbol, Noto Color Emoji;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -106,11 +101,4 @@ h5,
 h6 {
   margin: 0;
   font-weight: bold;
-}
-
-h1 {
-  font-size: to-em(42);
-}
-h2 {
-  font-size: to-em(36);
 }

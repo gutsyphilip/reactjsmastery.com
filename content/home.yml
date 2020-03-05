@@ -1,0 +1,16 @@
+- title: Guides
+  items:
+    - id: performance
+      description: Learn and master React JS from scratch through online classes taught by live instructors and one-on-one mentoring. Enjoy premium content designed to teach you the skills required to build scalable applications that are blazing fast, scalable, highly performant and fully functional using React!
+      title: Perfomance
+    - id: blog
+      description: Learn and master React JS from scratch through online classes taught by live instructors and one-on-one mentoring. Enjoy premium content designed to teach you the skills required to build scalable applications that are blazing fast, scalable, highly performant and fully functional using React!
+      title: Blog
+    - id: add-react-to-a-website
+      title: Add React to a Website
+    - id: create-a-new-react-app
+      title: Create a New React App
+    - id: cdn-links
+      title: CDN Links
+    - id: release-channels
+      title: Release Channels

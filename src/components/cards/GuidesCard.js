@@ -2,16 +2,14 @@ import React from "react"
 import { Link } from "gatsby"
 import styles from "./cards.module.scss"
 
-const GuidesCard = () => {
+const GuidesCard = ({ data }) => {
+  const { title, description, id } = data
+  console.log("data", data)
   return (
-    <Link to="/lol">
+    <Link to={`/${id}`}>
       <div className={styles.guidesCard}>
-        <h4>GENERAL</h4>
-        <p>
-          Lorem ipsum dolor sit, amet consectetur adipisicing elit. Doloremque
-          cum autem voluptatem ipsam at sit assumenda nostrum ad eveniet soluta?
-          Tempora animi nemo sint tenetur dolores ab ipsum et facilis.
-        </p>
+        <h4 className={styles.guidesCard__Title}>{title}</h4>
+        <p>{description}</p>
       </div>
     </Link>
   )

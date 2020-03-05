@@ -33,12 +33,9 @@
   & > :nth-child(1) {
     display: none;
   }
-  & > :nth-child(2) {
-    padding: to-em(30);
-  }
   @include lg() {
     display: grid;
-    grid-gap: to-em(30);
+    // grid-gap: to-em(30);
     grid-template-columns: 280px 1fr;
     grid-template-areas:
       "sidebar content"
@@ -52,10 +49,8 @@
       top: to-em(30);
       height: 100vh;
       border-right: 1px solid $light-black;
-      display: flex;
     }
     & > :nth-child(2) {
-      padding: to-em(30);
       grid-area: content;
     }
   }

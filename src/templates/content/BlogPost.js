@@ -3,6 +3,7 @@ import { Link, graphql } from "gatsby"
 
 import Bio from "../../components/bio"
 import SEO from "../../components/seo"
+import styles from "./content.module.scss"
 
 class BlogPost extends React.Component {
   render() {
@@ -12,24 +13,24 @@ class BlogPost extends React.Component {
     const { previous, next } = this.props.pageContext
 
     return (
-      <div location={this.props.location} title={siteTitle}>
+      <section
+        location={this.props.location}
+        className={styles.blogPost}
+        title={siteTitle}
+      >
         <SEO
           title={post.frontmatter.title}
           description={post.frontmatter.description || post.excerpt}
         />
-        <article>
+
+        <article className={styles.blogPost__Article}>
           <header>
             <h1>{post.frontmatter.title}</h1>
             <p>{post.frontmatter.date}</p>
           </header>
-          <section dangerouslySetInnerHTML={{ __html: post.html }} />
-          <hr />
-          <footer>
-            <Bio />
-          </footer>
+          <main dangerouslySetInnerHTML={{ __html: post.html }} />
         </article>
-
-        <nav>
+        <footer className={styles.blogPost__Footer}>
           <ul
             style={{
               display: `flex`,
@@ -54,8 +55,9 @@ class BlogPost extends React.Component {
               )}
             </li>
           </ul>
-        </nav>
-      </div>
+          <Bio />
+        </footer>
+      </section>
     )
   }
 }

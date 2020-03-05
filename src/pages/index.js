@@ -6,7 +6,9 @@ import SEO from "../components/seo"
 import { HomeLayout } from "../components/layouts"
 import { Grid } from "../components/utility/Grid"
 import { GuidesCard } from "../components/cards"
+import homePageData from "../../content/home.yml"
 
+console.log(homePageData)
 class Home extends React.Component {
   render() {
     const { data } = this.props
@@ -35,16 +37,17 @@ class Home extends React.Component {
           </p>
         </section>
         <section>
-          <GuidesCard />
-          <GuidesCard />
-          <GuidesCard />
-          <GuidesCard />
-          <GuidesCard />
-          <GuidesCard />
-          <GuidesCard />
-          <GuidesCard />
+          {homePageData.map(({ title, items }) => {
+            return (
+              <>
+                {items.map(item => {
+                  console.log(item)
+                  return <GuidesCard data={item} />
+                })}
+              </>
+            )
+          })}
         </section>
-        {/* </Grid> */}
       </HomeLayout>
     )
   }

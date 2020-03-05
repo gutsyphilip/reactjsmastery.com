@@ -2,8 +2,15 @@ const path = require(`path`)
 const { createFilePath } = require(`gatsby-source-filesystem`)
 
 exports.createPages = async ({ graphql, actions }) => {
-  const { createPage } = actions
+  const { createPage, createRedirect } = actions
 
+  // Redirect /index.html to root.
+  createRedirect({
+    fromPath: "/index.html",
+    redirectInBrowser: true,
+    toPath: "/",
+  })
+  
   const blogPost = path.resolve(`./src/templates/library/Library.js`)
   const result = await graphql(
     `

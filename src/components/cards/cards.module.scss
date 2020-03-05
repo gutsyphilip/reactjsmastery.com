@@ -8,6 +8,9 @@
   margin-bottom: to-em(20);
   padding: to-em(20 40);
   cursor: pointer;
+  &__Title {
+    text-transform: uppercase;
+  }
   &:hover {
     opacity: 1;
     transform: scale(1.1);
