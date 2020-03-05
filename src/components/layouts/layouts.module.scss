@@ -38,7 +38,7 @@
 
   & > :nth-child(1) {
     display: none;
-    margin-top: to-em(40);
+    // margin-top: to-em(40);
   }
   @include lg() {
     display: grid;
