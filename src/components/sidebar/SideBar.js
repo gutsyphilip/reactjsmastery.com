@@ -10,19 +10,10 @@ export default class SideBar extends Component {
   }
 
   render() {
-    console.log(sectionListPerformance)
     return (
       <section className={styles.sideBar}>
         {sectionListPerformance.map((section, index) => (
-          <SideBarNav
-            // createLink={createLink}
-            // isActive={activeSection === section || sectionList.length === 1}
-            key={index}
-            // location={location}
-            // onLinkClick={closeParentMenu}
-            // onSectionTitleClick={() => this._toggleSection(section)}
-            section={section}
-          />
+          <SideBarNav key={index} section={section} />
         ))}
       </section>
     )

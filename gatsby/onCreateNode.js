@@ -3,16 +3,19 @@ const { createFilePath } = require(`gatsby-source-filesystem`)
 
 module.exports = ({ node, actions, getNode }) => {
   const { createNodeField } = actions
-  // const { permalink, redirect_from } = node.frontmatter
-  // const { relativePath, sourceInstanceName } = getNode(node.parent)
-  // console.log(node)
 
   if (node.internal.type === `MarkdownRemark`) {
-    const value = createFilePath({ node, getNode })
+    const path = createFilePath({ node, getNode })
+    path[path.length - 1] = ".html"
+    console.log(path)
+
+    // slug = `/${path.replace(".md", ".html")}`
+
     createNodeField({
       name: `slug`,
       node,
-      value,
+      value: path,
     })
+    return
   }
 }

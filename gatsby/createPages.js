@@ -26,6 +26,7 @@ module.exports = async ({ graphql, actions }) => {
               }
               frontmatter {
                 title
+                permalink
               }
             }
           }
@@ -40,9 +41,8 @@ module.exports = async ({ graphql, actions }) => {
 
   // Create content pages.
   const posts = result.data.allMarkdownRemark.edges
-
   posts.forEach((post, index) => {
-    const slug = post.node.fields.slug ? post.node.fields.slug : "/"
+    const slug = post.node.fields.slug
     let template
     if (slug.includes("performance/")) {
       if (slug.includes("performance/")) {

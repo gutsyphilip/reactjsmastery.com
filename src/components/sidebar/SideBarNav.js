@@ -15,7 +15,7 @@ export default class SideBarNav extends Component {
     const { uid } = this.state
     return (
       <nav className={styles.sideBarNav}>
-        <h4>{section.title && section.title.toUpperCase()}</h4>
+        <h5>{section.title && section.title}</h5>
         <ul id={uid}>
           {section.items.map((item, index) => (
             <li key={item.id}>

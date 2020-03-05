@@ -52,8 +52,9 @@
       grid-area: sidebar;
       display: flex;
       flex-direction: column;
-      position: sticky;
-      top: to-em(30);
+      position: fixed;
+      width: 280px;
+      top: to-em(50);
       height: 100vh;
       border-right: 1px solid $light-black;
     }
