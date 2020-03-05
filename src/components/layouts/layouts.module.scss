@@ -3,7 +3,9 @@
 @import "../../styles/variables";
 
 .homeLayout {
-  padding: to-em(30);
+  padding: to-em(80 30);
+  margin: to-em(60 0);
+
   & > :first-child {
     top: to-em(80);
     margin-bottom: to-em(60);
@@ -11,6 +13,8 @@
 
   @include lg() {
     padding: to-em(60);
+    margin: to-em(100 0);
+
     display: grid;
     grid-gap: to-em(100);
     grid-template-areas:
@@ -30,8 +34,11 @@
   }
 }
 .guidesLayout {
+  margin: to-em(60 0);
+
   & > :nth-child(1) {
     display: none;
+    margin-top: to-em(40);
   }
   @include lg() {
     display: grid;

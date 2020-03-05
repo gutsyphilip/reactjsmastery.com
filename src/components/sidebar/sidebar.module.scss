@@ -6,8 +6,7 @@
 }
 .sideBarNav {
   color: $light-grey;
-  //   padding-top: 1rem;
-  //   padding-bottom: 1rem;
+
   h4 {
     color: #b7b5bd;
     padding: 1.5em 1.5em 0.6em 1.5em;
@@ -44,7 +43,6 @@
         padding-left: 1.5em;
         padding-bottom: 0.75em;
         width: 100%;
-        z-index: 1;
         text-decoration: none;
         &,
         &::before,
