@@ -37,7 +37,6 @@
   margin: to-em(40 0);
 
   & > :nth-child(1) {
-    display: none;
     padding-top: to-em(40);
   }
   @include lg() {

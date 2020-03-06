@@ -1,8 +1,46 @@
+@import "../../styles/breakpoint";
 @import "../../styles/converter";
 @import "../../styles/variables";
 
+.MenuIcon {
+  width: to-em(40);
+  height: to-em(40);
+  &__Wrapper {
+    background: $blue-to-purple;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    position: fixed;
+    right: to-em(20);
+    bottom: to-em(20);
+    width: to-em(50);
+    height: to-em(50);
+    border-radius: 50%;
+    z-index: 3;
+  }
+
+  @include lg() {
+    display: none;
+  }
+}
 .sideBar {
   overflow: scroll;
+  background: $black;
+  height: 100vh;
+  width: 100%;
+  position: absolute;
+  margin-left: -100%;
+  transition: all 0.3s ease-in-out;
+  z-index: 2;
+  @include lg() {
+    margin-left: 0;
+    position: relative !important;
+  }
+
+  &__isOpen {
+    margin-left: 0;
+  }
 }
 .sideBarNav {
   color: $light-grey;

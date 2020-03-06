@@ -1,13 +1,13 @@
 import React from "react"
 import { Link } from "gatsby"
 import styles from "./navbar.module.scss"
-import { Logo } from "../../assets/svgs"
+import { LogoIcon } from "../../assets/svgs"
 
 const NavBar = () => {
   return (
     <nav className={styles.navBar}>
       <Link to="/">
-        <Logo className={styles.navBar__Logo} />
+        <LogoIcon className={styles.navBar__Logo} />
       </Link>
     </nav>
   )
