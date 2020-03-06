@@ -5,11 +5,11 @@
 .navBar {
   display: flex;
   align-items: center;
-  height: to-em(60);
+  height: to-em(80);
   padding: 1.5em;
   border-bottom: 1px solid $light-black;
   position: fixed;
-    top: to-em(0);
+  top: to-em(0);
   width: 100%;
   background: $black;
   z-index: 5;
@@ -17,10 +17,7 @@
     text-decoration: none;
   }
 
-  //   @include lg() {
-  //     padding: to-em(60);
-  //   }
-  //   @include xl() {
-  //     padding: to-em(20 220);
-  //   }
+  &__Logo {
+    max-width: to-em(180);
+  }
 }
