@@ -18,15 +18,14 @@ export default class SideBar extends Component {
   render() {
     const { mobileMenuOpen } = this.state
     return (
-      <>
-        <section
-          className={`${styles.sideBar} ${mobileMenuOpen &&
-            styles.sideBar__isOpen}`}
-        >
-          {sectionListPerformance.map((section, index) => (
-            <SideBarNav key={index} section={section} />
-          ))}
-        </section>
+      <section
+        className={`${styles.sideBar} ${mobileMenuOpen &&
+          styles.sideBar__isOpen}`}
+      >
+        {sectionListPerformance.map((section, index) => (
+          <SideBarNav key={index} section={section} />
+        ))}
+
         <div
           className={styles.MenuIcon__Wrapper}
           onClick={this.handleToggleMobileMenu}
@@ -34,7 +33,7 @@ export default class SideBar extends Component {
           {!mobileMenuOpen && <MenuIcon className={styles.MenuIcon} />}
           {mobileMenuOpen && <CloseIcon className={styles.MenuIcon} />}
         </div>
-      </>
+      </section>
     )
   }
 }

@@ -3,7 +3,7 @@
 @import "../../styles/variables";
 
 .blogPost {
-  padding: to-em(30 0);
+  padding: to-em(60 0);
   @include lg() {
     height: 100%;
     // margin-left: auto;
@@ -44,6 +44,12 @@
   &__Article {
     padding: to-em(30);
     line-height: to-em(25) !important;
+    @include lg {
+      grid-area: content;
+      max-width: to-em(900);
+      padding: to-em(50 80);
+      // margin: auto;
+    }
     h1,
     h2,
     h3,
@@ -90,11 +96,6 @@
         flex-direction: column;
         max-width: to-em(900);
       }
-    }
-    @include lg {
-      grid-area: content;
-      max-width: to-em(900);
-      // margin: auto;
     }
   }
 

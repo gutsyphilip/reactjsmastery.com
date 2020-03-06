@@ -34,11 +34,6 @@
   }
 }
 .guidesLayout {
-  margin: to-em(40 0);
-
-  & > :nth-child(1) {
-    padding-top: to-em(40);
-  }
   @include lg() {
     display: grid;
     // grid-gap: to-em(30);
