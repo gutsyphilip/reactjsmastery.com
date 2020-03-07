@@ -1,9 +1,9 @@
 module.exports = {
   siteMetadata: {
-    title: `Gatsby Starter Blog`,
-    author: `Kyle Mathews`,
-    description: `A starter blog demonstrating what Gatsby can do.`,
-    siteUrl: `https://gatsby-starter-blog-demo.netlify.com/`,
+    title: `React Mastery`,
+    author: `Philip Obosi`,
+    description: `Premium content designed to teach you the skills required to build scalable applications that are blazing fast, scalable, highly performant and fully functional using React!`,
+    siteUrl: `https://reactmastery.com/`,
     social: {
       twitter: `worldclassdev`,
     },
@@ -65,8 +65,8 @@ module.exports = {
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        name: `Gatsby Starter Blog`,
-        short_name: `GatsbyJS`,
+        name: `React Mastery`,
+        short_name: `ReactMastery`,
         start_url: `/`,
         background_color: `#ffffff`,
         theme_color: `#663399`,

@@ -26,7 +26,7 @@ class BlogPost extends React.Component {
         <article className={styles.blogPost__Article}>
           <header>
             <h1>{post.frontmatter.title}</h1>
-            <p>{post.frontmatter.date}</p>
+            <p>Last updated: {post.frontmatter.date}</p>
           </header>
           <main dangerouslySetInnerHTML={{ __html: post.html }} />
           <footer className={styles.blogPost__Article__Footer}>

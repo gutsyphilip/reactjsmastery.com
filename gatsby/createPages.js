@@ -15,10 +15,7 @@ module.exports = async ({ graphql, actions }) => {
   const result = await graphql(
     `
       {
-        allMarkdownRemark(
-          sort: { fields: [frontmatter___date], order: DESC }
-          limit: 1000
-        ) {
+        allMarkdownRemark(limit: 1000) {
           edges {
             node {
               fields {
@@ -43,6 +40,7 @@ module.exports = async ({ graphql, actions }) => {
   const posts = result.data.allMarkdownRemark.edges
   posts.forEach((post, index) => {
     const slug = post.node.fields.slug
+    const permalink = post.node.frontmatter.permalink
     let template
     if (slug.includes("performance/")) {
       if (slug.includes("performance/")) {
@@ -56,7 +54,8 @@ module.exports = async ({ graphql, actions }) => {
       path: `${slug}`,
       component: template,
       context: {
-        slug: slug,
+        slug,
+        permalink,
         previous,
         next,
       },

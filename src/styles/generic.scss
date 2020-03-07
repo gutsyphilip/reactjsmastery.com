@@ -35,7 +35,7 @@ body {
   font-weight: normal;
   margin: 0 auto;
   background-color: $black;
-  color: $white;
+  color: rgba(255, 255, 255, 0.6);
 }
 
 *,
@@ -103,6 +103,7 @@ h5,
 h6 {
   margin: 0;
   font-weight: bold;
+  color: $white;
 }
 
 a {

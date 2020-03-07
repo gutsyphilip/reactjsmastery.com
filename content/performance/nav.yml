@@ -6,13 +6,13 @@
       title: Structure and Setup
 - title: A look into React
   items:
-    - id: new-beginnings
-      title: New Beginnings
-    - id: add-react-to-a-website
-      title: Add React to a Website
-    - id: create-a-new-react-app
-      title: Create a New React App
-    - id: cdn-links
-      title: CDN Links
-    - id: release-channels
-      title: Release Channels
+    - id: working-with-components
+      title: Working with React Components
+#     - id: add-react-to-a-website
+#       title: Add React to a Website
+#     - id: create-a-new-react-app
+#       title: Create a New React App
+#     - id: cdn-links
+#       title: CDN Links
+#     - id: release-channels
+#       title: Release Channels

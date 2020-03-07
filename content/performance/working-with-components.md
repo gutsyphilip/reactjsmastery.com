@@ -1,10 +1,8 @@
 ---
 
-title: Structure and Setup
-date: "2020-03-02"
+title: Components
+date: "2020-03-03"
 description: "Hello World"
-permalink: performance/structure-and-structure.html
-
 ---This is my first post on my new fake blog! How exciting!
 
 I'm sure I'll write a lot more interesting things in the future.

@@ -100,7 +100,7 @@
   }
 
   &__linkIsActive {
-    color: $light-blue;
+    color: $light-blue !important;
 
     &::before,
     &::after {
