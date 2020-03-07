@@ -12,7 +12,9 @@
     padding: to-em(20 40);
     &:hover {
       opacity: 1;
-      transform: scale(1.1);
+      transform: translateY(-0.25rem);
+      box-shadow: rgba(46, 41, 51, 0.08) 0px 4px 8px,
+        rgba(71, 63, 79, 0.16) 0px 8px 16px;
     }
   }
   a {
