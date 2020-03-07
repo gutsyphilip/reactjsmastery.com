@@ -1,12 +1,20 @@
-@import "../../styles/variables";
+@import "../../styles/breakpoint";
 @import "../../styles/converter";
+@import "../../styles/variables";
 
 .guidesCard {
   background-color: $light-black;
   opacity: 0.7;
   transition: all 0.2s ease-in-out;
   margin-bottom: to-em(20);
-  padding: to-em(20 40);
+  padding: to-em(20 30);
+  @include lg() {
+    padding: to-em(20 40);
+    &:hover {
+      opacity: 1;
+      transform: scale(1.1);
+    }
+  }
   a {
     text-decoration: none !important;
     color: $white;
@@ -19,9 +27,5 @@
   }
   &__Description {
     // font-size: to-em(14);
-  }
-  &:hover {
-    opacity: 1;
-    transform: scale(1.1);
   }
 }

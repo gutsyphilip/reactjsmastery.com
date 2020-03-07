@@ -13,7 +13,7 @@
 
   @include lg() {
     padding: to-em(60);
-    margin: to-em(100 0);
+    margin: to-em(20 0);
 
     display: grid;
     grid-gap: to-em(100);
@@ -30,7 +30,7 @@
     }
   }
   @include xl() {
-    padding: to-em(80 220);
+    padding: to-em(80 200);
   }
 }
 .guidesLayout {

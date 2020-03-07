@@ -19,8 +19,8 @@ class Home extends React.Component {
       <HomeLayout location={this.props.location} title={siteTitle}>
         {/* <Grid columns="1fr 1fr" gap="100px"> */}
         <section>
-          <h1>
-            Welcome <br /> to React JS Mastery.
+          <h1 style={{ fontSize: "2.5em", lineHeight: "1.2" }}>
+            Hello, Welcome <br /> to React Mastery.
           </h1>
           <br />
           <p>

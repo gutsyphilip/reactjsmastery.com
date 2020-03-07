@@ -8,7 +8,7 @@ const GuidesCard = ({ data }) => {
   return (
     <div className={styles.guidesCard}>
       <Link to={`/${id}/`}>
-        <h4 className={styles.guidesCard__Title}>{title}</h4>
+        <h5 className={styles.guidesCard__Title}>{title}</h5>
         <p className={styles.guidesCard__Description}>{description}</p>
       </Link>
     </div>
