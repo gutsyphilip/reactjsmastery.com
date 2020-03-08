@@ -85,6 +85,10 @@ module.exports = {
     // To learn more, visit: https://gatsby.dev/offline
     // `gatsby-plugin-offline`,
     `gatsby-plugin-sass`, // Enable styling with sass
-    "gatsby-plugin-catch-links",
+    `gatsby-plugin-catch-links`,
+    `gatsby-transformer-yaml`,
   ],
+  mapping: {
+    "MarkdownRemark.frontmatter.author": `AuthorYaml`,
+  },
 }

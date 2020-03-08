@@ -9,28 +9,8 @@ import React from "react"
 import { useStaticQuery, graphql } from "gatsby"
 import Image from "gatsby-image"
 
-const Bio = () => {
-  const data = useStaticQuery(graphql`
-    query BioQuery {
-      avatar: file(absolutePath: { regex: "/profile-pic.jpg/" }) {
-        childImageSharp {
-          fixed(width: 50, height: 50) {
-            ...GatsbyImageSharpFixed
-          }
-        }
-      }
-      site {
-        siteMetadata {
-          author
-          social {
-            twitter
-          }
-        }
-      }
-    }
-  `)
-
-  const { author, social } = data.site.siteMetadata
+const Bio = ({ authorProfile }) => {
+  const { name, bio, profilePicture, social } = authorProfile
   return (
     <div
       style={{
@@ -38,9 +18,9 @@ const Bio = () => {
         marginTop: 40,
       }}
     >
-      <Image
+      {/* <Image
         fixed={data.avatar.childImageSharp.fixed}
-        alt={author}
+        alt={name}
         style={{
           marginBottom: 0,
           minWidth: 50,
@@ -49,10 +29,21 @@ const Bio = () => {
         imgStyle={{
           borderRadius: `50%`,
         }}
+      /> */}
+      <img
+        src={profilePicture}
+        alt={name}
+        style={{
+          marginBottom: 0,
+          marginRight: 10,
+          objectFit: "cover",
+          maxWidth: "80px",
+          maxHeight: "80px",
+          borderRadius: `50%`,
+        }}
       />
       <p>
-        Written by <strong>{author}</strong> who lives and works in San
-        Francisco building useful things.
+        Written by <strong>{name}</strong> who {bio}
         {` `}
         <a href={`https://twitter.com/${social.twitter}`}>
           You should follow him on Twitter

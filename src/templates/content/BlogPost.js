@@ -11,6 +11,7 @@ class BlogPost extends React.Component {
     const post = this.props.data.markdownRemark
     const siteTitle = this.props.data.site.siteMetadata.title
     const { previous, next } = this.props.pageContext
+    const authorProfile = post.frontmatter.author
 
     return (
       <section
@@ -54,7 +55,7 @@ class BlogPost extends React.Component {
                 )}
               </li>
             </ul>
-            {/* <Bio /> */}
+            <Bio authorProfile={authorProfile} />
           </footer>
         </article>
       </section>

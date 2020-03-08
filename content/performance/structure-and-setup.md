@@ -4,6 +4,7 @@ title: Structure and Setup
 date: "2020-03-02"
 description: "Hello World"
 permalink: performance/structure-and-structure.html
+author: worldclassdev
 
 ---This is my first post on my new fake blog! How exciting!
 

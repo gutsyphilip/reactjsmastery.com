@@ -4,6 +4,7 @@ title: A Complete Guide to Performance Optimization in React Applications.
 date: "2020-03-01"
 description: "Hello World"
 permalink: performance/index.html
+author: worldclassdev
 ---> This is my first post on my new fake blog! How exciting!
 
 Many React applications are slow! Others are pretty fast too. In nearly every case, those you might consider as fast could be faster. What makes the difference?

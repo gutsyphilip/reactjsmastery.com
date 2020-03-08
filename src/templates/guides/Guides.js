@@ -30,6 +30,14 @@ export const pageQuery = graphql`
         title
         date(formatString: "MMMM DD, YYYY")
         description
+        author {
+          name
+          bio
+          profilePicture
+          social {
+            twitter
+          }
+        }
       }
     }
   }
