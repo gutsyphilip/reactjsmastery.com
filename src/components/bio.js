@@ -31,7 +31,7 @@ const Bio = ({ authorProfile }) => {
         }}
       /> */}
       <img
-        src={profilePicture}
+        src={`/authors/${profilePicture}`}
         alt={name}
         style={{
           marginBottom: 0,
