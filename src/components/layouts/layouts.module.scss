@@ -4,6 +4,7 @@
 
 .homeLayout {
   padding: to-em(80 30);
+  margin-top: to-em(40);
 
   & > :first-child {
     top: to-em(80);
@@ -12,7 +13,7 @@
 
   @include lg() {
     padding: to-em(60);
-    margin: to-em(20 0);
+    margin: to-em(40 0);
 
     display: grid;
     grid-gap: to-em(100);

@@ -18,22 +18,32 @@ class Home extends React.Component {
     return (
       <HomeLayout location={this.props.location} title={siteTitle}>
         {/* <Grid columns="1fr 1fr" gap="100px"> */}
-        <section>
-          <h1 style={{ fontSize: "2.5em", lineHeight: "1.2" }}>
+        <section
+          style={{
+            color: "#FFFFFF",
+          }}
+        >
+          <h1
+            style={{
+              fontSize: "2.5em",
+              lineHeight: "1.2",
+              color: "#FFFFFF !important",
+            }}
+          >
             Hello, Welcome <br /> to React Mastery.
           </h1>
           <br />
           <p>
             <span className="bgGradient">Learn</span> and{" "}
-            <span className="bgGradient">master</span> React JS from scratch
-            through online classes taught by live instructors and one-on-one
-            mentoring. Enjoy premium content designed to teach you the skills
-            required to{" "}
+            <span className="bgGradient">master</span> the art of building
+            complex applications using React JS through a{" "}
             <span className="bgGradient">
-              build scalable applications that are blazing fast, scalable,
-              highly performant and fully functional
+              thorough and practical examination of concepts and practices
             </span>{" "}
-            using React!
+            that you may encounter on your journey as a React developer.
+            {/* build scalable applications that are blazing fast, scalable,
+              highly performant and fully functional */}
+            {/* using React! */}
           </p>
         </section>
         <section>

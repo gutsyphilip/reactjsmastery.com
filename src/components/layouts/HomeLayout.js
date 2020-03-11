@@ -13,7 +13,7 @@ class HomeLayout extends React.Component {
       <section>
         {/* <AnnouncementStrip /> */}
         <div className="topBar"></div>
-        {/* <NavBar /> */}
+        <NavBar />
         <main className={styles.homeLayout}>{children}</main>
       </section>
     )

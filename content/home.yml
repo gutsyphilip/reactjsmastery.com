@@ -3,6 +3,9 @@
     - id: performance
       description: Learn various ways to optimize your React applications for performance without compromising functionality. Ranging from minor syntax changes to better development practices and  architectural concerns all explored following a  strictly practical approach.
       title: Performance
-    # - id: blog
-    #   description: Follow updates from the world of React JS.
-    #   title: Blog
+    - id: #
+      description: Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation.
+      title: Accessibility
+    - id: #
+      description: Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore  magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation.
+      title: Working with Media
